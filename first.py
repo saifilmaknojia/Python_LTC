@@ -5,7 +5,7 @@ for m in msg:
     print(m)
 print(msg)
 
-s = "Python"
+s = "Python_version_3.8"
 for t in zip(s):
     print(t)
 
