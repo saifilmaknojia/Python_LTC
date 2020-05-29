@@ -1,6 +1,6 @@
 import math
 print(dir(math))
-msg = "454657"
+msg = "454"
 for m in msg:
     print(m)
 print(msg)
