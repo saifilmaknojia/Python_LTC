@@ -5,10 +5,6 @@ from pretty_html_table import build_table
 from email_script import send_mail
 
 page_url = "https://markets.businessinsider.com/premarket"
-# driver = webdriver.Chrome(executable_path=r"C:\Junit\chromedriver.exe")
-# driver.get(page_url)
-# driver.maximize_window()
-
 uClient = uReq(page_url)
 page_source_code = uClient.read()
 uClient.close()
@@ -30,11 +26,10 @@ for futures_fetch in futures_classes:
     i += 1
 
 tabular_panda = pd.json_normalize(form_json)
-
 output = build_table(tabular_panda, 'blue_light')
 send_mail(output)
 
-print("Mail sent successfully.")
+print("E-Mail sent successfully.")
 
 
   
